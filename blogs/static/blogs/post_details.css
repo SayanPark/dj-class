@@ -1,0 +1,36 @@
+body{background-color: #eeeeee}
+#summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 10px auto;
+    background-color: rgba(191, 253, 251, 0.55);
+    border-radius: 20px;
+    padding: 25px;
+}
+#summary h2{
+    color: #000000;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 2.3rem;
+}
+#summary article img{
+    width: 200px;
+    border: 4px solid #000000;
+    border-radius: 20px;
+    /*transform: rotateZ(5deg);*/
+}
+#summary article address{
+    color: #000000;
+    font-weight: bold;
+}
+#summary article div{color: #000000}
+main{
+    max-width: 1300px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+}

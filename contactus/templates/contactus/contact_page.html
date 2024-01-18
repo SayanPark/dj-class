@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header_reference %}
+	<link rel="stylesheet" href="{% static 'blogs/index.css' %}">
+    <link rel="stylesheet" href="{% static 'blogs/all_post.css'%}">
+{% endblock %}
+
+{% block title_page %}
+	Contact us
+{% endblock %}
+
+{% block content_page %}
+        <h1>Contact:</h1>
+        <form action="{% url 'contact-us' %}" method="get">
+            {% csrf_token %}
+            <label>
+                <input type="text" name="email:" required>
+            </label>
+            <br>
+            <button type="submit">send</button>
+        </form>
+{% endblock %}
+
+

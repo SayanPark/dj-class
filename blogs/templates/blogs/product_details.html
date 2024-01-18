@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details:</title>
+</head>
+<body>
+    <h1>{{ pro.title }}</h1>
+    <h3>ID:{{ pro.slug }}</h3>
+    <h3>Price:{{ pro.price }}</h3>
+    <h3>Description:{{ pro.description }}</h3>
+    <h3>Status:
+        {% if pro.is_active %}
+        	Available
+        {% else %}
+            UnAvailable
+        {% endif %}
+    </h3>
+</body>
+</html>

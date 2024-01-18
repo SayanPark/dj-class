@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title_page %}
+	hello users
+{% endblock %}
+
+{% block header_reference %}
+	<link rel="stylesheet" href="{% static 'blogs/index.css' %}">
+{% endblock %}
+
+{% block content_page %}
+{#	<h1>Welcome to my website</h1>#}
+{#    {{ a }}#}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blogs/images/multipurpose-programming-languages.jpg' %}" alt="programs">
+            <h1>Web site</h1>
+        </header>
+    <p>Hello, My name is Sayan, a web-developer</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>latest posts</h2>
+{#        <ul>#}
+{#            <li><a href="">Test</a></li>#}
+{#            <li><a href="">Test</a></li>#}
+{#            <li><a href="">Test</a></li>#}
+{#        </ul>#}
+    <ul>
+        {% for post in leatest_posts %}
+        	<li>
+            {% include 'blogs/includes/post.html' %}
+            </li>
+        {% endfor %}
+
+    </ul>
+    </section>
+    <section id="about">
+        <h3>Explanation about the site</h3>
+        <p>The site is included the training og the programing languages</p>
+        <p>The programing languages such as: Python, Django, Html, CSS,...</p>
+    </section>
+{% endblock %}

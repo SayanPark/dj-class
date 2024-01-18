@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List of products</title>
+</head>
+
+<body>
+    <h1>Product list:</h1>
+    <b>count of products:{{ numbers }}</b><br>
+    <b>average price: {{ info.price__avg }}</b><br>
+    <b>maximum price: {{ info.price__max }}</b><br>
+    <b>minimum price: {{ info.price__min }}</b>
+    <hr color="black" width="90%">
+    <hr color="blue" width="90%">
+    <div style="line-height: 30px">
+        <table>
+            <tr>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Descriptions</th>
+            </tr>
+            {% for product in all_products %}
+                <tr>
+                    <td><a href="{{ product.slug }}">{{ product.title }}</a></td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.description }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <hr color="blue" width="90%">
+    <hr color="black" width="90%">
+</body>
+
+</html>
